@@ -1,6 +1,7 @@
 # FinTech_EstresBancaria :bank::moneybag:
 David Tinaut Martinez: Sistema FinTech de Prueba de Estrés Bancaria
-Enlace a mi repositorio: https://github.com/davidtinamart/FinTech_EstresBancaria.git
+
+* Enlace a mi repositorio: https://github.com/davidtinamart/FinTech_EstresBancaria.git
 
 ## Sistema FinTech de Prueba de Estrés Bancaria
 
