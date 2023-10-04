@@ -3,7 +3,7 @@ package org.example;
 public class Lanzador {
     public static void main(String[] args) {
         Cuenta cuenta = new Cuenta(10000);
-        int numThreads = 400 + 200 + 600 + 400 + 200 + 600;
+        int numThreads = 400 + 200 + 600 + 400 + 200 + 600; // (1000 depósitos y 1400 retiros)
 
         Thread[] threads = new Thread[numThreads];
 
@@ -48,6 +48,7 @@ public class Lanzador {
         for (Thread thread : threads) {
             try {
                 thread.join();
+                System.out.println("El thread " + thread.getId() + " ha terminado");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -56,6 +57,7 @@ public class Lanzador {
         // Verificar que el saldo final sea igual al saldo inicial
         if (cuenta.getSaldo() == 10000) {
             System.out.println("La simulación fue exitosa. Saldo final: " + cuenta.getSaldo());
+            System.out.println("El numero de threadIndex es: " + threadIndex);
         } else {
             System.out.println("La simulación falló. Saldo final: " + cuenta.getSaldo());
         }

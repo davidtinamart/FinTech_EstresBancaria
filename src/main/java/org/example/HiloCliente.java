@@ -15,8 +15,10 @@ public class HiloCliente implements Runnable {
     public void run() {
         if (deposito) {
             cuenta.depositar(cantidad);
+            System.out.println("Depósito de " + cantidad + " euros realizado por el hilo " + Thread.currentThread().getId());
         } else {
             cuenta.retirar(cantidad);
+            System.out.println("Retiro de " + cantidad + " euros realizado por el hilo " + Thread.currentThread().getId());
         }
     }
 }
